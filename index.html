@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <section>
+        <div class="circle">
+
+        </div>
+        <header>
+            <a><img src="images/logo.png"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="menu" onclick="toggleMenu()">
+                <li>
+                    <a>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        Menu
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        What's new
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>
+                    It's not just a Coffee<br>It's <span onmousemove="chang()" onmouseout="changText()">Starbucks</span>
+                </h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis eius fuga explicabo provident hic,
+                    ratione sit accusantium tenetur velit temporibus quae nulla at. Error nostrum ducimus temporibus,
+                    eveniet saepe laboriosam?
+                </p>
+                <a>Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img class="starbucks" src="images/img1.png">
+            </div>
+            <ul class="thumb">
+                <li class="imgsmall">
+                    <img onclick="changImg('images/img1.png');changColor('#017143')" src="images/thumb1.png">
+                </li>
+                <li class="imgsmall">
+                    <img onclick="changImg('images/img2.png');changColor('#eb7495')" src="images/thumb2.png">
+                </li>
+                <li class="imgsmall">
+                    <img onclick="changImg('images/img3.png');changColor('#d752b1')" src="images/thumb3.png">
+                </li>
+            </ul>
+            <ul class="sci">
+                <li>
+                    <a><img src="images/facebook.png" alt="facebook"></a>
+                </li>
+                <li>
+                    <a><img src="images/instagram.png" alt="instagram"></a>
+                </li>
+                <li>
+                    <a><img src="images/twitter.png" alt="twitter"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script>
+        // alert('hello world');
+        function chang() {
+            document.querySelector('span').style.color = "red";
+            document.querySelector("span").textContent = "abc";
+        }
+        function changText() {
+            document.querySelector('span').style.color = "blue";
+            document.querySelector("span").textContent = "Starbucks";
+        }
+        function changImg(image) {
+            document.querySelector('.starbucks').src = image;
+        }
+        function changColor(color) {
+            document.querySelector('.circle').style.backgroundColor = color;
+        }
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active');
+            var nav = document.querySelector('.menu');
+            nav.classList.toggle('active');
+        }
+    
+    </script>
+</body>
+
+</html>

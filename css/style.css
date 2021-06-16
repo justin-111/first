@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 100px;
+    position: relative;
+}
+.circle{
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    clip-path: circle(600px at right bottom);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+ul{
+    display: flex;
+    justify-content:flex-end;
+}
+ul li{
+    padding: 0 10px;
+    list-style: none;
+
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.textBox{
+    width: 600px;
+}
+h2{
+    font-size: 4em;
+}
+span{
+    color: #017143;
+    font-size: 1.2em;
+}
+.textBox a{
+    background-color: #017143;
+    border-radius: 40px;
+    padding: 8px 20px;
+    margin: 20px 0;
+    display:inline-block;
+    color: rgb(255, 255, 255);
+}
+.imgBox img{
+    width: 340px;
+    margin: 0 40px;
+}
+.imgsmall img{
+    width: 60px;
+    transition:2s;
+    cursor: pointer;
+}
+.imgsmall img:hover{
+    transform: translateY(-15px);
+}
+.thumb{
+    position: absolute;
+    display: flex;
+    left:50%;
+    transform: translateX(-50%);
+    bottom:0;
+}
+.sci li a img{
+    transform: scale(0.5);
+    filter: invert(1);
+}
+.sci{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 3px;
+    flex-direction:column;
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width:990px) {
+    section{
+        padding: 20px 20px 120px 20px;
+    }
+    header a{
+        width: 60px;
+    }
+    .toggle{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url('/images/menu.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+    }
+    .toggle.active{
+        background: url('/images/close.png');
+        background-size: 30px;
+        background-position: center;
+        z-index: 51;
+    }
+    .menu.active{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 50;
+        font-size: 1.5rem;
+    }
+    .menu{
+        display: none;
+    }
+    .menu li{
+        padding: 30px;
+    }
+    .content{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    h2{
+        font-size: 2.5em;
+    }
+    .textBox{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .content .starbucks{
+        justify-content: center;
+        width: 300px;
+    }
+    .circle{
+        clip-path: circle(300px at center bottom);
+    }
+    .sci{
+        background-color: #017143;
+        width: 50px;
+        border-radius: 5px 0 0 5px;
+        padding: 5px 0;
+        
+    }
+    .imgsmall{
+        padding: -50px;
+        top:50%;
+        transform: translateY(100%);
+        flex-direction:column;
+    }
+}
